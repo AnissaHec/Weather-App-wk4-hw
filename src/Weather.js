@@ -1,7 +1,12 @@
 import React from "react";
+import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
+
+  const apiKey = "f81614abe2395d5dfecd45b9298041de";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+
   let weatherData = {
     city: "New York",
     temperature: 19,
